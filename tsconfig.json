@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es2016",
+        "module": "commonjs",
+        "rootDir": "./src",
+        "outDir": "dist" /* Specify an output folder for all emitted files. */,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "skipLibCheck": true,
+        "types": ["@types/node"],
+        "lib": ["ESNext"],
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "noImplicitAny": false
+    },
+    "include": ["src/**/*.ts", "modules.d.ts"],
+    "exclude": ["node_modules", "dist"]
+}
