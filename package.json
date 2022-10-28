@@ -10,13 +10,14 @@
         "url": "https://raflymaulana.me"
     },
     "scripts": {
-        "lint": "eslint ./src/ --ext .ts",
+        "lint": "eslint ./src/**/* --ext .ts",
         "start": "node ./dist/index.js",
-        "dev": "yarn build --watch",
-        "build": "node esbuild.js",
-        "build:prod": "yarn build --production",
+        "dev": "tywa --watch",
+        "build": "tywa",
+        "build:prod": "tywa --production",
         "db:pull": "prisma db pull",
         "db:generate": "prisma generate",
+        "db:push": "prisma db push",
         "db:build": "yarn db:pull && yarn db:generate"
     },
     "keywords": [],
