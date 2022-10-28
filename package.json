@@ -31,6 +31,8 @@
     },
     "devDependencies": {
         "@types/node": "^18.7.18",
+        "@typescript-eslint/eslint-plugin": "^5.41.0",
+        "@typescript-eslint/parser": "^5.41.0",
         "eslint": "^8.23.1",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.2.1",
@@ -44,18 +46,21 @@
         ],
         "extends": [
             "eslint:recommended",
-            "prettier"
+            "prettier",
+            "plugin:@typescript-eslint/eslint-recommended",
+            "plugin:@typescript-eslint/recommended"
         ],
         "parserOptions": {
             "sourceType": "module",
-            "ecmaVersion": 2018
+            "ecmaVersion": 2020
         },
         "rules": {
             "no-case-declarations": "off",
             "no-empty-function": "off",
             "prefer-const": "off",
             "prettier/prettier": "error",
-            "react/no-unescaped-entities": "off"
+            "react/no-unescaped-entities": "off",
+            "@typescript-eslint/no-explicit-any": "off"
         },
         "env": {
             "node": true
